@@ -15,10 +15,10 @@ class MyApp extends StatelessWidget {
         appBar: new AppBar(
           title: new Text("Navegacion por tabs"),
           bottom: new TabBar(indicatorColor: Colors.red, tabs: <Widget>[
-            new Tab(icon: new Icon(Icons.home),text: "Inicio",),
-            new Tab(icon: new Icon(Icons.contacts),text: "Registro",),
-            new Tab(icon: new Icon(Icons.place),text: "Lugares",),
-            new Tab(icon: new Icon(Icons.help),text: "Acerca de",)
+            new Tab(icon: new Icon(Icons.home),text: "Menu",),
+            new Tab(icon: new Icon(Icons.contacts),text: "Chats",),
+            new Tab(icon: new Icon(Icons.place),text: "Perfil",),
+            new Tab(icon: new Icon(Icons.help),text: "Configuracion",)
             ]),
         ),
         body: new TabBarView(
