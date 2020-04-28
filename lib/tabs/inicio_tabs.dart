@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login/buscar_amigos.dart';
+import 'package:login/tabs/resgistro_tabs.dart';
 
 class InicioTabs extends StatelessWidget {
   @override
@@ -6,7 +8,63 @@ class InicioTabs extends StatelessWidget {
     return Scaffold(
       body: new Container(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Column(
+                  children: <Widget>[ 
+                    Padding(
+                      padding: EdgeInsets.all(10),
+                      child: RaisedButton(
+                        color: Colors.blue,
+                        shape: new RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0)
+                        ),
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => buscar_amigos()),                                   
+                            );
+                        },
+                        child: SizedBox(
+                          width: 100,
+                          height: 100,
+                          child: Center(
+                            child: Text("Buscar Amigos", textAlign: TextAlign.center,),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.all(10),
+                      child: RaisedButton(
+                        color: Colors.blue,
+                        shape: new RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0)
+                        ),
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => RegistroTabs()),                                   
+                            );
+                        },
+                        child: SizedBox(
+                          width: 100,
+                          height: 100,
+                          child: Center(
+                            child: Text("Favoritos", textAlign: TextAlign.center,),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ), 
+              ],
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -24,7 +82,7 @@ class InicioTabs extends StatelessWidget {
                           width: 100,
                           height: 100,
                           child: Center(
-                            child: Text("Botón 1", textAlign: TextAlign.center,),
+                            child: Text("Añadir amigos", textAlign: TextAlign.center,),
                           ),
                         ),
                       ),
@@ -45,7 +103,7 @@ class InicioTabs extends StatelessWidget {
                           width: 100,
                           height: 100,
                           child: Center(
-                            child: Text("Botón 2", textAlign: TextAlign.center,),
+                            child: Text("Chats", textAlign: TextAlign.center,),
                           ),
                         ),
                       ),
@@ -57,6 +115,9 @@ class InicioTabs extends StatelessWidget {
           ],
         ),
       ) 
+    );  
+
+
 
 
 
@@ -96,6 +157,6 @@ class InicioTabs extends StatelessWidget {
           */
         ],
       )*/
-    );
+    
   }
 }
