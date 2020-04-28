@@ -37,6 +37,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue
       ),
       home: TabController,
+      //nueva linea
+      debugShowCheckedModeBanner: false,
     );
   }
 }
