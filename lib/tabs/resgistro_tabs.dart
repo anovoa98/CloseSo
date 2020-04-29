@@ -11,7 +11,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
     return Positioned(
       top: 0,
       child: Container(
-        color: Colors.green,
+        color: Colors.white,
         height: 250,
         width: MediaQuery.of(context).size.width,
       ),
@@ -31,7 +31,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
             IconButton(
               icon: Icon(
                 Icons.arrow_back_ios,
-                color: Colors.white,
+                color: Colors.black,
               ),
               onPressed: () {},
             ),
@@ -43,7 +43,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
               style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white),
+                  color: Colors.black),
             ),
             SizedBox(
               width: 100,
@@ -51,8 +51,8 @@ class _RegistroTabsState extends State<RegistroTabs> {
             IconButton(
               onPressed: () {},
               icon: Icon(
-                Icons.add_shopping_cart,
-                color: Colors.white,
+                Icons.playlist_add_check,
+                color: Colors.black,
               ),
             )
           ],
@@ -70,7 +70,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
         height: 260,
         width: MediaQuery.of(context).size.width * 0.9,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.blue,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Container(
@@ -89,7 +89,11 @@ class _RegistroTabsState extends State<RegistroTabs> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   CircleAvatar(
-                    radius: 60,
+                    child: const Image(
+                      image: NetworkImage(
+                          'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
+                    ),
+                    radius: 50,
                   ),
                   SizedBox(
                     width: 20,
@@ -121,7 +125,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
         height: 200,
         width: MediaQuery.of(context).size.width * 0.9,
         decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(20)),
+            color: Colors.blue, borderRadius: BorderRadius.circular(20)),
         child: Container(
           padding: EdgeInsets.all(20),
           child: Column(
@@ -159,7 +163,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
             Container(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
-              color: Colors.blueAccent,
+              color: Colors.white,
             ),
             _greenColor(),
             _appBar(),
