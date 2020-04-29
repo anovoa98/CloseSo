@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login/tabs/inicio_tabs.dart';
+//import 'package:login/tabs/inicio_tabs.dart';
 
-class buscar_amigos extends StatelessWidget {
+class BuscarAmigos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {  
     return Scaffold(

@@ -2,7 +2,32 @@ import 'package:dynamic_list_view/DynamicListView.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-class listado_amigos extends StatelessWidget {
+class ListaAmigos extends StatelessWidget
+{
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Listado de amigos'),
+      ),
+      body: ListView(
+          children: List.generate(10, (index){
+            return Center(
+              child: Text(
+                'Contacto # $index',
+                style: Theme.of(context).textTheme.headline,
+              ),
+            );
+          }
+
+        ),
+      ) 
+    );
+  }
+}
+
+/*
+
+class ListaInfinita extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -32,4 +57,5 @@ class listado_amigos extends StatelessWidget {
     String title = dataList[index].toString();
     return ListTile(title: Text("Hola $title"));
   };
-}  
+ 
+}   */

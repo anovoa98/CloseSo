@@ -25,7 +25,7 @@ class InicioTabs extends StatelessWidget {
                         ),
                         onPressed: (){
                           Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => buscar_amigos()),                                   
+                            builder: (context) => BuscarAmigos()),                                   
                             );
                         },
                         child: SizedBox(
@@ -101,8 +101,8 @@ class InicioTabs extends StatelessWidget {
                         ),
                         onPressed: (){
                           Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => listado_amigos()),                                   
-                          );
+                            builder: (context) => ListaAmigos()),    
+                            );
                         },
                         child: SizedBox(
                           width: 100,
