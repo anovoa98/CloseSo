@@ -16,6 +16,7 @@ dependencies:
   flutter_bloc:
   equatable:
   meta:
+  dynamic_list_view: ^0.1.5
 
 dev_dependencies:
   flutter_test:
