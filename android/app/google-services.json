@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:726966357553:android:4f0e686fd198fae82f8f10",
         "android_client_info": {
-          "package_name": "com.example.login"
+          "package_name": "co.edu.konradlorenz.soclose"
         }
       },
       "oauth_client": [
