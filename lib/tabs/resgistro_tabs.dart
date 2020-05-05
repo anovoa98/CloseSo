@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RegistroTabs extends StatefulWidget {
+  RegistroTabs({this.logoutCallback});
+  final dynamic logoutCallback;
   @override
   _RegistroTabsState createState() => _RegistroTabsState();
 }
@@ -172,6 +174,11 @@ class _RegistroTabsState extends State<RegistroTabs> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.blue,
+          child: Icon(Icons.power_settings_new),
+          onPressed: () => {widget.logoutCallback()}),
     );
   }
 }
