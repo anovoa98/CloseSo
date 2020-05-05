@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
       length: 4,//numeros de tabs
       child: new Scaffold(
         appBar: new AppBar(
-          title: new Text("Navegacion por tabs"),
+          title: new Text("SoCloseAplications"),
           bottom: new TabBar(indicatorColor: Colors.red, tabs: <Widget>[
             new Tab(icon: new Icon(Icons.home),text: "Menu",),
             new Tab(icon: new Icon(Icons.contacts),text: "Chats",),
