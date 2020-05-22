@@ -7,4 +7,4 @@ class LugaresTabs extends StatelessWidget {
       
     );
   }
-}
+} 
