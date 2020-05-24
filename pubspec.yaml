@@ -20,6 +20,7 @@ dependencies:
   dynamic_list_view: ^0.1.5
   google_maps_flutter: ^0.5.27+3
   easy_localization: ^2.3.2
+  location: ^3.0.2
 
 
 dev_dependencies:
@@ -33,4 +34,5 @@ flutter:
   assets: 
     - assets/logoU.png
     - assets/images/socloselogo.PNG
+    - assets/images/locationLogo.png
  

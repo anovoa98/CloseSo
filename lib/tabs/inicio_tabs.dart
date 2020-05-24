@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:login/tabs/lugares_tabs.dart';
 import 'package:login/tabs/resgistro_tabs.dart';
 import 'package:login/buscar_amigos.dart';
 import 'package:login/listado_amigos.dart';
 import 'package:login/flutter_speed_dial.dart';
+
 
 class InicioTabs extends StatelessWidget {
   bool _dialVisible = true;
@@ -32,21 +34,21 @@ class InicioTabs extends StatelessWidget {
               backgroundColor: Colors.red,
               label: 'Map',
               labelStyle: TextStyle(fontWeight: FontWeight.w500),
-              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>BuscarAmigos()))
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>BuscarAmigosPage()))
             ),
             SpeedDialChild(
-              child: Icon(Icons.brush),
+              child: Icon(Icons.favorite),
               backgroundColor: Colors.blue,
-              label: 'Second',
+              label: 'Favorites',
               labelStyle: TextStyle(fontWeight: FontWeight.w500),
-              onTap: () => print('SECOND CHILD'),
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>AmigosFavoritos()))
             ),
             SpeedDialChild(
-              child: Icon(Icons.keyboard_voice),
+              child: Icon(Icons.chat_bubble_outline),
               backgroundColor: Colors.green,
-              label: 'Third',
+              label: 'Chats',
               labelStyle: TextStyle(fontWeight: FontWeight.w500),
-              onTap: () => print('THIRD CHILD'),
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>ChatsAmigos())),
             ),
           ],
         ),

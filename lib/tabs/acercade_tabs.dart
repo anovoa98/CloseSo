@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+//tab configuraciones
 class Acercade extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

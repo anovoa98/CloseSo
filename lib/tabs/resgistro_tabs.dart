@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+//aquí es la pagina del perfil
+//necesario traer perfil e info directamente de la base de datos de firebase
 class RegistroTabs extends StatefulWidget {
   RegistroTabs({this.logoutCallback});
   final dynamic logoutCallback;

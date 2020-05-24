@@ -150,20 +150,16 @@ class _LoginSignupPageState extends State<LoginSignupPage> {
   Widget showLogo() {
     return new Hero(
       tag: 'hero',
-      child: Padding(
-        padding: EdgeInsets.fromLTRB(0.0, 70.0, 0.0, 0.0),
-        child: CircleAvatar(
-          backgroundColor: Colors.transparent,
-          radius: 48.0,
-          child: new Image.asset('assets/images/socloselogo.PNG', width: 150, height: 150,),
+      child: Container(
+          child: new Image.asset('assets/images/socloselogo.PNG', width: 250, height: 250),
         ),
-      ),
+      
     );
   }
 
   Widget showEmailInput() {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(0.0, 100.0, 0.0, 0.0),
+      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
       child: new TextFormField(
         maxLines: 1,
         keyboardType: TextInputType.emailAddress,

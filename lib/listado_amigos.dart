@@ -1,8 +1,9 @@
 import 'package:dynamic_list_view/DynamicListView.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
+//pagina listado de favoritos 
 
-class ListaAmigos extends StatelessWidget
+class AmigosFavoritos extends StatelessWidget
 {
   Widget build(BuildContext context) {
     return Scaffold(
