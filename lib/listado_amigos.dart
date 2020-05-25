@@ -8,15 +8,23 @@ class AmigosFavoritos extends StatelessWidget
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Listado de amigos'),
+        title: Text('Favoritos'),
       ),
       body: ListView(
           children: List.generate(10, (index){
             return Center(
-              child: Text(
-                'Contacto # $index',
-                style: Theme.of(context).textTheme.headline,
-              ),
+              child: Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(Icons.person),
+                      title: Text('Prueba contacto'),
+                      subtitle: Text('Aquí el estado'),
+                    )
+                  ],
+                )
+              )
             );
           }
 

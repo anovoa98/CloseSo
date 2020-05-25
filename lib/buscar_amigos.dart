@@ -32,7 +32,7 @@ class BuscarAmigos extends State<BuscarAmigosPage> {
   );
 
   Future<Uint8List> getMarker() async {
-    ByteData byteData = await DefaultAssetBundle.of(context).load("assets/images/locationLogo.png");
+    ByteData byteData = await DefaultAssetBundle.of(context).load("assets/images/location.png");
     return byteData.buffer.asUint8List();
   }
 
@@ -85,7 +85,7 @@ class BuscarAmigos extends State<BuscarAmigosPage> {
     if (_locationSubscription != null) {
       _locationSubscription.cancel();
     }
-    dispose();
+    super.dispose();
   }
 
   @override
