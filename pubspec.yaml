@@ -13,6 +13,9 @@ dependencies:
   cupertino_icons: ^0.1.2
   firebase_auth: ^0.16.0
   firebase_core: ^0.4.4+3
+  cloud_firestore: ^0.13.5
+  font_awesome_flutter: ^8.8.1
+  image_picker: ^0.6.5+3
   google_sign_in:
   flutter_bloc:
   equatable:
@@ -21,6 +24,9 @@ dependencies:
   google_maps_flutter: ^0.5.27+3
   easy_localization: ^2.3.2
   location: ^3.0.2
+  flip_card: 0.4.4
+  shimmer: ^1.1.0
+  flutter_slidable: ^0.5.4
 
 
 dev_dependencies:
@@ -35,4 +41,12 @@ flutter:
     - assets/logoU.png
     - assets/images/socloselogo.PNG
     - assets/images/location.png
+    - assets/images/person1.jpg
+    - assets/images/person2.png
+    - assets/images/person3.jpg
+    - assets/images/person4.png
+    - assets/images/person5.jpg
+    - assets/images/person6.jpg
+    - assets/images/person7.jpg
+    - assets/images/chat-background-1.jpg
  
