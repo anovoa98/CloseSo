@@ -34,6 +34,5 @@ flutter:
   assets: 
     - assets/logoU.png
     - assets/images/socloselogo.PNG
-    - assets/images/locationLogo.png
     - assets/images/location.png
  

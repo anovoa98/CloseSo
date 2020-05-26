@@ -20,7 +20,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
       ),
     );
   }
-
+/*
   //Create back button
   Widget _appBar() {
     return Positioned(
@@ -63,11 +63,11 @@ class _RegistroTabsState extends State<RegistroTabs> {
       ),
     );
   }
-
+*/
 //Create your owner info
   Widget _userInfo() {
     return Positioned(
-      top: 100,
+      
       child: Container(
         margin: const EdgeInsets.all(20),
         height: 260,
@@ -122,7 +122,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
   //User addres
   Widget _userAddres() {
     return Positioned(
-      top: 380,
+      top: 300,
       child: Container(
         margin: EdgeInsets.all(20),
         height: 200,
@@ -169,7 +169,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
               color: Colors.white,
             ),
             _greenColor(),
-            _appBar(),
+            //_appBar(),
             _userInfo(),
             _userAddres(),
           ],
