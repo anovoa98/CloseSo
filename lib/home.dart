@@ -14,21 +14,21 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TabController = new DefaultTabController( 
-      length: 3,//numeros de tabs
+      length: 2,//numeros de tabs
       child: new Scaffold(
         appBar: new AppBar(
           title: new Text("SoClose Aplication"),
           bottom: new TabBar(indicatorColor: Colors.red, tabs: <Widget>[
             new Tab(icon: new Icon(Icons.home),text: "Menu",),
             new Tab(icon: new Icon(Icons.person_outline),text: "Perfil",),
-            new Tab(icon: new Icon(Icons.settings_applications),text: "Configuracion",)
+            //new Tab(icon: new Icon(Icons.settings_applications),text: "Configuracion",)
             ]),
         ),
         body: new TabBarView(
           children: <Widget>[ 
             new InicioTabs(),
             new RegistroTabs(logoutCallback: logoutCallback, userId: this.userId,),
-            new Acercade()
+            //new Acercade()
           ],
         )
       ),
