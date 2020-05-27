@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
         body: new TabBarView(
           children: <Widget>[ 
             new InicioTabs(),
-            new RegistroTabs(logoutCallback: logoutCallback,),
+            new RegistroTabs(logoutCallback: logoutCallback, userId: this.userId,),
             new Acercade()
           ],
         )

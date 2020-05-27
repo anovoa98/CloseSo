@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login/services/authentication.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class LoginSignupPage extends StatefulWidget {
   LoginSignupPage({this.auth, this.loginCallback});
@@ -17,6 +18,8 @@ class _LoginSignupPageState extends State<LoginSignupPage> {
   String _email;
   String _password;
   String _errorMessage;
+  String _name;
+  String _lastName;
 
     bool _isLoginForm;
   bool _isLoading;
@@ -44,6 +47,10 @@ class _LoginSignupPageState extends State<LoginSignupPage> {
           print('Signed in: $userId');
         } else {
           userId = await widget.auth.signUp(_email, _password);
+          Firestore.instance
+            .collection('users')
+            .document(userId) 
+            .setData({'name': _name, "lastName":_lastName, "email":_email});
           
           //widget.auth.sendEmailVerification();
           //_showVerifyEmailSentDialog();
@@ -118,14 +125,23 @@ class _LoginSignupPageState extends State<LoginSignupPage> {
           key: _formKey,
           child: new ListView(
             shrinkWrap: true,
-            children: <Widget>[
+            children: _isLoginForm ? <Widget>[
               showLogo(),
               showEmailInput(),
               showPasswordInput(),
               showPrimaryButton(),
               showSecondaryButton(),
               showErrorMessage(),
-            ],
+            ]: <Widget>[
+              showLogo(),
+              showEmailInput(),
+              showNameInput(),
+              showLastNameInput(),
+              showPasswordInput(),
+              showPrimaryButton(),
+              showSecondaryButton(),
+              showErrorMessage(),
+            ]
           ),
         ));
   }
@@ -172,6 +188,44 @@ class _LoginSignupPageState extends State<LoginSignupPage> {
             )),
         validator: (value) => value.isEmpty ? 'Email no puede estar vacío' : null,
         onSaved: (value) => _email = value.trim(),
+      ),
+    );
+  }
+
+  Widget showNameInput() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+      child: new TextFormField(
+        maxLines: 1,
+        keyboardType: TextInputType.text,
+        autofocus: false,
+        decoration: new InputDecoration(
+            hintText: 'Nombre',
+            icon: new Icon(
+              Icons.person,
+              color: Colors.grey,
+            )),
+        validator: (value) => value.isEmpty ? 'Nombre no puede estar vacío' : null,
+        onSaved: (value) => _name = value.trim(),
+      ),
+    );
+  }
+
+  Widget showLastNameInput() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+      child: new TextFormField(
+        maxLines: 1,
+        keyboardType: TextInputType.text,
+        autofocus: false,
+        decoration: new InputDecoration(
+            hintText: 'Apellido',
+            icon: new Icon(
+              Icons.person,
+              color: Colors.grey,
+            )),
+        validator: (value) => value.isEmpty ? 'Apellido no puede estar vacío' : null,
+        onSaved: (value) => _lastName = value.trim(),
       ),
     );
   }
