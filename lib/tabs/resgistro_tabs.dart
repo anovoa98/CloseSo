@@ -56,8 +56,8 @@ class _RegistroTabsState extends State<RegistroTabs> {
     return Positioned(
       child: Container(
           margin: const EdgeInsets.all(20),
-          height: 500,
-          width: MediaQuery.of(context).size.width * 0.9,
+          height: 300,
+          width: MediaQuery.of(context).size.width * 2.0,
           decoration: BoxDecoration(
             color: Colors.blue,
             borderRadius: BorderRadius.circular(20),
@@ -82,43 +82,58 @@ class _RegistroTabsState extends State<RegistroTabs> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Padding(
-                            padding: EdgeInsets.only(top: 60.0),
-                            child: IconButton(
-                              icon: Icon(
-                                FontAwesomeIcons.edit,
-                                size: 30.0,
-                              ),
-                              onPressed: () {
-                                getImage(false);
-                              },
-                            ),
-                          ),
-                          CircleAvatar(
-                            radius: 60,
-                            backgroundColor: Color(0xff476cfb),
-                            child: ClipOval(
-                              child: new SizedBox(
-                                width: 90.0,
-                                height: 90.0,
-                                child: (_image != null)
-                                    ? Image.file(
-                                        _image,
-                                        fit: BoxFit.fill,
-                                      )
-                                    : Image.network(
-                                        "https://www.softzone.es/app/uploads/2018/04/guest.png",
-                                        fit: BoxFit.fill,
-                                      ),
-                            )),
-                            ),
-                            ]),
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                SizedBox(
+                                      width: 30,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 5.0),
+                                  child: IconButton(
+                                    icon: Icon(
+                                      FontAwesomeIcons.edit,
+                                      size: 20.0,
+                                    ),
+                                    onPressed: () {
+                                      getImage(false);
+                                    },
+                                  ),
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    
+                                    CircleAvatar(
+                                      radius: 60,
+                                      backgroundColor: Color(0xff476cfb),
+                                      child: ClipOval(
+                                          child: new SizedBox(
+                                        width: 90.0,
+                                        height: 90.0,
+                                        child: (_image != null)
+                                            ? Image.file(
+                                                _image,
+                                                fit: BoxFit.fill,
+                                              )
+                                            : Image.network(
+                                                "https://www.softzone.es/app/uploads/2018/04/guest.png",
+                                                fit: BoxFit.fill,
+                                              ),
+                                      )),
+                                    )
+                                  ],
+                                )
+                              ]),
                           SizedBox(
                             width: 200,
                           ),
-                          Text(snapshot.data.toString().split(";")[0]+"  "+snapshot.data.toString().split(";")[1]),
+                          Text(
+                            (snapshot.data.toString().split(";")[0] +
+                                "  " +
+                                snapshot.data.toString().split(";")[1]),
+                            style: TextStyle(
+                                fontSize: 25, fontWeight: FontWeight.bold),
+                          ),
                           SizedBox(
                             width: 10,
                           ),
