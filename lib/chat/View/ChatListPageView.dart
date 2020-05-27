@@ -35,7 +35,7 @@ class _MyAppState extends State<ChatListPageView> {
         title: Text(
           "SoClose chat",
         ),
-        backgroundColor: Colors.deepOrange,
+        backgroundColor:  Color(0xFF9E9D24),
       ),
       body: Container(
         child: Column(
@@ -49,7 +49,7 @@ class _MyAppState extends State<ChatListPageView> {
                         messsages[index]["data"]))),
             Divider(
               height: 5.0,
-              color: Colors.deepOrange,
+              color: Color(0xFF9E9D24),
             ),
             Container(
               padding: EdgeInsets.only(left: 15.0, right: 15.0),
@@ -60,7 +60,7 @@ class _MyAppState extends State<ChatListPageView> {
                       child: TextField(
                     controller: messageInsert,
                     decoration: InputDecoration.collapsed(
-                        hintText: "Send your message",
+                        hintText: "Escribe tus dudas sobre SoClose",
                         hintStyle: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 18.0)),
                   )),
@@ -72,7 +72,7 @@ class _MyAppState extends State<ChatListPageView> {
                           
                           Icons.send,
                           size: 30.0,
-                          color: Colors.deepOrange,
+                          color: Color(0xFF9E9D24 ),
                         ),
                         onPressed: () {
                           if (messageInsert.text.isEmpty) {
@@ -106,7 +106,7 @@ class _MyAppState extends State<ChatListPageView> {
       padding: EdgeInsets.all(10.0),
       child: Bubble(
           radius: Radius.circular(15.0),
-          color: data == 0 ? Colors.deepOrange : Colors.orangeAccent,
+          color: data == 0 ? Color(0xFF9E9D24) : Color(0xFF9E9D24),
           elevation: 0.0,
           alignment: data == 0 ? Alignment.topLeft : Alignment.topRight,
           nip: data == 0 ? BubbleNip.leftBottom : BubbleNip.rightTop,
