@@ -109,7 +109,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
                                         fit: BoxFit.fill,
                                       )
                                     : Image.network(
-                                        "https://image.freepik.com/vector-gratis/diseno-logo-phoenix_111165-14.jpg",
+                                        "https://www.softzone.es/app/uploads/2018/04/guest.png",
                                         fit: BoxFit.fill,
                                       ),
                             )),
