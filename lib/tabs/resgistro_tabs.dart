@@ -65,6 +65,25 @@ class _RegistroTabsState extends State<RegistroTabs> {
           child: FutureBuilder(
               future: getUser,
               builder: (BuildContext context, AsyncSnapshot snapshot) {
+                Widget widget;
+                Widget widget2;
+                if(snapshot.hasData){
+                  widget = Text(
+                            (snapshot.data.toString().split(";")[0] +
+                                "  " +
+                                snapshot.data.toString().split(";")[1]),
+                            style: TextStyle(
+                                fontSize: 25, fontWeight: FontWeight.bold),
+                          );
+                  widget2 = Text("Email: ${snapshot.data.toString().split(';')[2]}",
+                          style: TextStyle(fontSize: 20));
+                }
+                else{
+                  widget = Text("Cargando información de usuario",
+                          style: TextStyle(fontSize: 20));
+                  widget2 = Text("Cargando información de usuario",
+                          style: TextStyle(fontSize: 20));
+                }
                 return Container(
                   margin: EdgeInsets.all(20),
                   child: Column(
@@ -127,13 +146,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
                           SizedBox(
                             width: 200,
                           ),
-                          Text(
-                            (snapshot.data.toString().split(";")[0] +
-                                "  " +
-                                snapshot.data.toString().split(";")[1]),
-                            style: TextStyle(
-                                fontSize: 25, fontWeight: FontWeight.bold),
-                          ),
+                          widget,
                           SizedBox(
                             width: 10,
                           ),
@@ -142,8 +155,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
                       SizedBox(
                         height: 20,
                       ),
-                      Text("Email: ${snapshot.data.toString().split(';')[2]}",
-                          style: TextStyle(fontSize: 20)),
+                      widget2
                     ],
                   ),
                 );
