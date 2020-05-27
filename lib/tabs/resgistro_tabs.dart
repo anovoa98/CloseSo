@@ -71,7 +71,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        "User information: ",
+                        "Información Usuario: ",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
