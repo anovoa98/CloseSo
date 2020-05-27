@@ -13,12 +13,16 @@ class RegistroTabs extends StatefulWidget {
 }
 
 class _RegistroTabsState extends State<RegistroTabs> {
+
+
+
+
   File _image;
   Widget _greenColor() {
     return Positioned(
       top: 0,
       child: Container(
-        color: Colors.white,
+        color: Color(0xFFD7CCC8),
         height: 250,
         width: MediaQuery.of(context).size.width,
       ),
@@ -172,7 +176,7 @@ class _RegistroTabsState extends State<RegistroTabs> {
             Container(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
-              color: Colors.white,
+              color: Color(0xFFD7CCC8),
             ),
             _greenColor(),
             //_appBar(),
@@ -181,8 +185,8 @@ class _RegistroTabsState extends State<RegistroTabs> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.white,
-          foregroundColor: Colors.blue,
+          backgroundColor: Color(0xFFD7CCC8),
+          foregroundColor: Colors.black,
           child: Icon(Icons.power_settings_new),
           onPressed: () => {widget.logoutCallback()}),
     );
