@@ -32,7 +32,7 @@ class BuscarAmigos extends State<BuscarAmigosPage> {
   );
 
   Future<Uint8List> getMarker() async {
-    ByteData byteData = await DefaultAssetBundle.of(context).load("assets/images/location.png");
+    ByteData byteData = await DefaultAssetBundle.of(context).load("assets/images/point.png");
     return byteData.buffer.asUint8List();
   }
 

@@ -42,7 +42,7 @@ flutter:
   assets: 
     - assets/logoU.png
     - assets/images/socloselogo.PNG
-    - assets/images/location.png
+    - assets/images/point.png
     - assets/images/person1.jpg
     - assets/images/person2.png
     - assets/images/person3.jpg
